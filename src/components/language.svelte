@@ -1,3 +1,5 @@
+<!-- Badge for the languages in the about section -->
+
 <script lang="ts">
   let languages = new Map<string, string>([
     ["HTML", "src/assets/imgs/HTML.svg"],
