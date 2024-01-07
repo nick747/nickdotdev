@@ -1,5 +1,6 @@
 <script lang="ts">
     import About from "./components/About.svelte";
+    import Projects from "./components/Projects.svelte";
 </script>
 
 <main>
@@ -8,6 +9,7 @@
     <span id="role">teenager & developer</span>
   </div>
   <About />
+  <Projects />
 </main>
 
 <style>
