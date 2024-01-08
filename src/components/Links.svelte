@@ -41,7 +41,7 @@
   h2 {
     font-size: 40px;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .icon_name {

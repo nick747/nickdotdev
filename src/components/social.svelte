@@ -14,7 +14,7 @@
 
 <style>
   img {
-    height: 2.5rem;
+    height: 1.88rem;
     width: auto;
   }
 </style>
