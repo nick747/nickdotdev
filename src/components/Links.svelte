@@ -1,15 +1,11 @@
 <script lang="ts">
   import Icon from "./social.svelte";
-
-  const openLink = (url: string) => {
-    window.open(url, "_blank");
-  }
 </script>
 
 <div class="links">
   <h2>Links & Contacts</h2>
   <div class="icon_name">
-    <div class="social clickable" on:click={() => openLink("https://github.com/nick747")}>
+    <div class="social clickable" on:click={() => window.open("https://github.com/nick747", "_blank")}>
       <Icon social="GitHub" />
       <span>nick747</span>
     </div>
@@ -17,7 +13,7 @@
       <Icon social="Discord" />
       <span>.mdotdev</span>
     </div>
-    <div class="social clickable" on:click={() => openLink("https://t.me/nickodon")}>
+    <div class="social clickable" on:click={() => window.open("https://t.me/nickodon", "_blank")}>
       <Icon social="Telegram" />
       <span>@nickdon</span>
     </div>
