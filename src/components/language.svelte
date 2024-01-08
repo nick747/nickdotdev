@@ -20,7 +20,7 @@
   ]);
 
   export let language: string;
-  let imgUrl = languages.get(language);
+  const imgUrl = languages.get(language);
 </script>
 
 <div class="language">

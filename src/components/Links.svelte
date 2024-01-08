@@ -1,24 +1,24 @@
 <script lang="ts">
-  import Icon from "./social.svelte";
+  import Social from "./social.svelte";
 </script>
 
 <div class="links">
   <h2>Links & Contacts</h2>
   <div class="icon_name">
     <div class="social clickable" on:click={() => window.open("https://github.com/nick747", "_blank")}>
-      <Icon social="GitHub" />
+      <Social social="GitHub" />
       <span>nick747</span>
     </div>
     <div class="social">
-      <Icon social="Discord" />
+      <Social social="Discord" />
       <span>.mdotdev</span>
     </div>
     <div class="social clickable" on:click={() => window.open("https://t.me/nickodon", "_blank")}>
-      <Icon social="Telegram" />
+      <Social social="Telegram" />
       <span>@nickdon</span>
     </div>
     <div class="social">
-      <Icon social="Mail" />
+      <Social social="Mail" />
       <span>nickodon747@proton.me</span>
     </div>
   </div>

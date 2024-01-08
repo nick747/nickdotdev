@@ -2,31 +2,28 @@
   import { onMount } from "svelte";
   import Topic from "./topic.svelte";
 
-  export let index: any;
+  export let index: number;
+
   let name: string = "";
   let description: string = "";
   let language: string = "";
   let url: string = "";
   let topics: string[] = [];
-  index = parseInt(index);
 
+  
   onMount(async () => {
-    try {
-      const result = await fetch(
-        "https://api.github.com/users/nick747/repos?sort=updated_at",
-      );
-      let data = await result.json();
-      data = data.filter((repo: any) => repo.fork !== true);
+    const result = await fetch(
+      "https://api.github.com/users/nick747/repos?sort=updated_at",
+    );
+    let data = await result.json();
+    data = data.filter((repo: any) => repo.fork !== true);
 
-      if (data.length > index) {
-        name = data[index].name || "";
-        description = data[index].description || "";
-        language = data[index].language || "";
-        url = data[index].html_url || "";
-        topics = data[index].topics || [];
-      }
-    } catch (error) {
-      console.error(error);
+    if (data.length > index) {
+      name = data[index].name || "";
+      description = data[index].description || "";
+      language = data[index].language || "";
+      url = data[index].html_url || "";
+      topics = data[index].topics || [];
     }
   });
 </script>

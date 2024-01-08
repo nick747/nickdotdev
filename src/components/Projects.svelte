@@ -5,9 +5,9 @@
 <div class="projects">
   <h2>Latest Projects</h2>
   <div class="cards">
-    <Repo index="0"/>
-    <Repo index="1"/>
-    <Repo index="2"/>
+    <Repo index={0}/>
+    <Repo index={1}/>
+    <Repo index={2}/>
   </div>
 </div>
 
