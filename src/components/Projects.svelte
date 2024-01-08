@@ -23,5 +23,6 @@
     width: 100%;
     justify-content: space-between;
     gap: 3rem;
+    margin-bottom: 3rem;
   }
 </style>

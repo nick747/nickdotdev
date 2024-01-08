@@ -1,5 +1,6 @@
 <script lang="ts">
     import About from "./components/About.svelte";
+    import Links from "./components/Links.svelte";
     import Projects from "./components/Projects.svelte";
 </script>
 
@@ -10,6 +11,7 @@
   </div>
   <About />
   <Projects />
+  <Links />
 </main>
 
 <style>
