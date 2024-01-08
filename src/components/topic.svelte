@@ -14,7 +14,7 @@
     gap: 0.25rem;
     border-radius: 1rem;
     border: 1px #363636 solid;
-    background: rgba(54, 54, 54, 0.25);
+    background: rgba(54, 54, 54, .25);
     padding: .25rem .75rem;
     font-size: 0.875rem;
     line-height: 1.25;
