@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import Topic from "./topic.svelte";
 
   export let index: any;
   let name: string = "";
@@ -43,18 +44,25 @@
     {/if}
   </div>
 
-  <div class="topics"></div>
+  <div class="end">
+    <div class="topics">
+      {#each topics.slice(0, 3) as topic, i}
+        <Topic topic={topic}/>
+      {/each}
+    </div>
 
-  {#if url}
-    <a href={url} id="url" target="_blank">View on GitHub -></a>
-  {/if}
+    {#if url}
+      <a href={url} id="url" target="_blank">View on GitHub -></a>
+    {/if}
+  </div>
 </div>
+
 
 <style>
   a {
     text-decoration: none;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .repo {
@@ -74,6 +82,7 @@
   .info {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
   }
 
   #name {
@@ -86,7 +95,7 @@
   #description {
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   #language {
@@ -99,5 +108,11 @@
     font-size: 14px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  .topics {
+    display: flex;
+    gap: 10px;
+    margin-bottom: .5rem;
   }
 </style>
