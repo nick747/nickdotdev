@@ -19,30 +19,66 @@
     ["Kotlin", "src/assets/imgs/Kotlin-Dark.svg"],
   ]);
 
+  let links = new Map<string, string | null>([
+    ["HTML", null],
+    ["CSS", null],
+    ["JavaScript", null],
+    ["React", "https://react.dev/"],
+    ["Svelte", "https://svelte.dev/"],
+    ["TailwindCSS", "https://tailwindcss.com/"],
+    ["Astro", "https://astro.build/"],
+    ["Flutter", "https://flutter.dev/"],
+    ["Dart", null],
+    ["C", null],
+    ["CPP", null],
+    ["VSCode", null],
+    ["NeoVim", null],
+    ["Python", null],
+    ["Kotlin", null],
+  ]);
+
   export let language: string;
-  const imgUrl = languages.get(language);
+  const imgSrc = languages.get(language);
+  const imgUrl = links.get(language);
 </script>
 
-<div class="language">
-  <img src={imgUrl} alt={"Product icon of " + language} />
-  <p>{language}</p>
-</div>
+{#if imgUrl}
+  <div
+    class="language clickable"
+    on:click={() => {
+      window.open(imgUrl, "_blank");
+    }}
+  >
+    <img src={imgSrc} alt={"Product icon of " + language} />
+    <p>{language}</p>
+  </div>
+{:else}
+  <div class="language">
+    <img src={imgSrc} alt={"Product icon of " + language} />
+    <p>{language}</p>
+  </div>
+{/if}
 
 <style>
   .language {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border: 1px #363636 solid;
     background-color: #242424;
-    padding: .25rem;
+    padding: 0.25rem;
     font-size: 0.875rem;
     line-height: 1.25;
     color: #1a202c;
     text-decoration: none;
   }
 
+  .clickable {
+    cursor: pointer;
+    border: 1px #404040 solid;
+    background-color: #303030;
+  }
   img {
     height: 18px;
     aspect-ratio: 1;
