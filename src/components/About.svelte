@@ -2,8 +2,9 @@
   import Language from "./language.svelte";
 </script>
 
+
 <div class="about">
-  <h2>About</h2>
+  <h2 class="text-2xl font-semibold mb-4">About</h2>
   <p>
     Hey there! I go by Nick747, but feel free to call me Mario. I&apos;m a teen
     based in Italy who enjoys developing with website and mobile app development
@@ -27,12 +28,6 @@
 </div>
 
 <style>
-  h2 {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
   p {
     font-size: 18px;
     line-height: 2;
